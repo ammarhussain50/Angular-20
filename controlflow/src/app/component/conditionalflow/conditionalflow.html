@@ -1,0 +1,82 @@
+<p>conditionalflow works!</p>
+
+<table>
+  <tr>
+    <td>
+      @if (Isparavisible == true) {
+      <p>This is a para</p>
+      } @else {
+      <h1>False value hay</h1>
+      }
+    </td>
+    <td>
+      <button (click)="Isparavisible = true">Show para</button>
+    </td>
+    <td>
+      <button (click)="Isparavisible = false">Hide para</button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      @if(startmondth == "feb"){
+      <span>feburary</span>
+      }@else if(startmondth == "jan"){
+      <span>january</span>
+      }@else if(startmondth == "mar"){
+      <span>march</span>
+      }@else if(startmondth == "apr"){
+      <span>april</span>
+      }
+    </td>
+    <td>
+      <input type="text" [(ngModel)]="startmondth" />
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <ul>
+        @for(item of citieslist; track $index){
+        <li>{{ item }}</li>
+        }
+      </ul>
+    </td>
+    <td>
+      <select name="" id="">
+        @for (item of citieslist ; track $index) {
+        <option value="">{{ item }}</option>
+        }
+      </select>
+    </td>
+  </tr>
+</table>
+<br />
+
+<table class="table table-bordered table-hover table-striped mt-4">
+  <thead class="table-dark">
+    <tr>
+      <th>SNo</th>
+      <th>Name</th>
+      <th>city</th>
+      <th>status</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (item of students; track $index) {
+
+    <tr>
+      <td>{{ $index }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{item.city}}</td>
+      <td>
+            @if (isActive == true) {
+                  <h6>Active</h6>
+            }@else {
+                  <h6>de-active</h6>
+            }
+      </td>
+    </tr>
+
+    }
+  </tbody>
+</table>

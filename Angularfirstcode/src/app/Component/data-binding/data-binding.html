@@ -1,0 +1,26 @@
+<p>data-binding works!</p>
+
+<table>
+      <tr>
+            <td>{{course_name}}</td>
+            <td>{{product_price}}</td>
+            <td>{{maxlengths}}</td>
+            <td>{{inptype}}</td>
+      </tr>
+      <tr>
+            <td><input [type]="inptype" [(ngModel)]="course_name" [attr.maxlength]="maxlengths"></td>
+      </tr>
+</table>
+
+<p [class]="myclassname">Course Name: {{ course_name}}</p>
+
+<button  style="display: none; display: block;">Save</button>
+
+<button (click)="showAlert()">show message</button>
+<button (click)="changevalue()">change</button>
+
+<select (change)="changecity()" >
+      <option value="">karachi</option>
+      <option value="">isla</option>
+      <option value="">lahore</option>
+</select>

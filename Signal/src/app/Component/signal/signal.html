@@ -1,0 +1,26 @@
+<p>signal works!</p>
+
+<span>{{firstname}}</span>
+<br>
+<span>{{coursename()}}</span> 
+<br>
+<span>{{courseetail()}}</span>
+
+
+
+<h2>Normal Variable Example</h2>
+<p>Firstname: {{ firstname }}</p>
+<button (click)="changeFirstname()">Change Firstname</button>
+
+<hr />
+
+<h2>Signal Example</h2>
+<p>Course: {{ coursename() }}</p>
+<button (click)="changeCourse()">Change Course</button>
+
+
+<!-- react me ref.current ki tarha hay -->
+<input #cityInput type="text" placeholder="Enter city name" />
+<button (click)="addCity(cityInput.value); cityInput.value=''">
+  Add City
+</button>
