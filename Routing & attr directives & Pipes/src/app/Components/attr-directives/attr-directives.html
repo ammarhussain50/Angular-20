@@ -1,0 +1,42 @@
+<p>attr-directives works!</p>
+
+<div class="p-3" [ngClass]="classname()" >
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora illo atque enim aspernatur. Incidunt possimus nesciunt et, repellendus iusto optio!
+</div>
+
+<p class="m-3" [ngStyle]="{ color: 'blue' }">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, reprehenderit!
+</p>
+
+<div class="col-3">
+  <p>
+    {{firstname | uppercase}}
+
+  </p>
+  <p>
+    {{course | lowercase}}
+  </p>
+
+  <h1>{{course | titlecase}}</h1>
+  <br>
+  <div>
+    without slice  {{arr}}
+  </div>
+  <br>
+  <div>
+    {{arr | slice:0:4}}
+  </div>
+  <br>
+  <div>
+    {{student|json}}
+  </div>
+  <br>
+  <div>
+    {{currentdate}}
+  </div>
+  <br>
+  <div>
+    {{currentdate | date:"dd-MM-yyyy"}}
+  </div>
+</div>
+
