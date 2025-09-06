@@ -1,0 +1,25 @@
+<p>rxresource works!</p>
+<div class="container mt-4">
+  <h2 class="mb-3">User List (RxResource Example)</h2>
+
+  <!-- Loading -->
+  @if (users.isLoading()) {
+    <div class="alert alert-info">Loading users, please wait...</div>
+  }
+
+  <!-- Error -->
+  @else if (users.error()) {
+    <div class="alert alert-danger">❌ Error loading users!</div>
+  }
+
+  <!-- Success -->
+  @else {
+    <ul class="list-group">
+      @for (user of users.value(); track user.id) {
+        <li class="list-group-item">
+          <strong>{{ user.name }}</strong> - {{ user.email }}
+        </li>
+      }
+    </ul>
+  }
+</div>

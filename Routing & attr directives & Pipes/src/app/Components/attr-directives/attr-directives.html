@@ -24,7 +24,7 @@
   </div>
   <br>
   <div>
-    {{arr | slice:0:4}}
+    {{arr | slice:-4:-3}}
   </div>
   <br>
   <div>
@@ -37,6 +37,11 @@
   <br>
   <div>
     {{currentdate | date:"dd-MM-yyyy"}}
+  </div>
+
+  <div class="col-6">
+    name : {{student.name | na}} <br>
+    email : {{student.email | na}}
   </div>
 </div>
 

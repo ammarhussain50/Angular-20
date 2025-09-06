@@ -1,9 +1,10 @@
 import { DatePipe, JsonPipe, LowerCasePipe, NgClass, NgStyle, SlicePipe, TitleCasePipe, UpperCasePipe } from '@angular/common';
 import { Component, signal } from '@angular/core';
+import { NaPipe } from '../../Pipes/na-pipe';
 
 @Component({
   selector: 'app-attr-directives',
-  imports: [NgClass,NgStyle,UpperCasePipe,LowerCasePipe,TitleCasePipe,SlicePipe,JsonPipe,DatePipe],
+  imports: [NgClass,NgStyle,UpperCasePipe,LowerCasePipe,TitleCasePipe,SlicePipe,JsonPipe,DatePipe,NaPipe],
   templateUrl: './attr-directives.html',
   styleUrl: './attr-directives.css'
 })
