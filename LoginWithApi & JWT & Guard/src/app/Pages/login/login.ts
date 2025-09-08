@@ -22,11 +22,14 @@ router = inject(Router)
   onLogin(){
     const formValue = this.loginForm.value
     console.log(formValue);
+    
     this.http.post("https://freeapi.miniprojectideas.com/api/User/Login",formValue).subscribe({
       next:(response:any)=>{
         if(response.result){
           alert("Login Successful")
           localStorage.setItem("token",response.data.token)
+          console.log(response.data.token);
+          
           this.router.navigateByUrl('/dashboard')
           alert("created")
         }else{

@@ -2,7 +2,8 @@ import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChang
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
-import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptors } from '@angular/common/http';
+import {tokenInterceptor} from './interceptor/token-interceptor'
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -11,7 +12,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     // provideHttpClient(withInterceptors([tokeInterceptor]))
     // provideHttpClient(HttpClient)
-     provideHttpClient()
+     provideHttpClient(withInterceptors([tokenInterceptor]))
     
   ]
 };
